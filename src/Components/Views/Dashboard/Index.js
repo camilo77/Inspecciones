@@ -25,6 +25,20 @@ class Index extends Component {
             label = "Agendar Inspección"
           />
         </Link>
+        <br/>
+        <Link to="/inspecciones">
+          <RaisedButton
+            primary = { true }
+            label = "Agendar Inspección"
+          />
+        </Link>
+        { " " }
+        <Link to="/inspecciones">
+          <RaisedButton
+            primary = { true }
+            label = "Agendar Inspección"
+          />
+        </Link>
       </div>
     );
   }
