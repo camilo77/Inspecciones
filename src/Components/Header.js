@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
+
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
+import SocialNotifications from 'material-ui/svg-icons/social/notifications';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import Avatar from 'material-ui/Avatar';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import IconMenu from 'material-ui/IconMenu';
 
 class Header extends Component {
   constructor( props ) {
@@ -24,6 +29,29 @@ class Header extends Component {
       <IconButton onClick = { this.handleToggle }>
         <NavigationMenu/>
       </IconButton>
+    );
+
+    /* Left Menu */
+    const leftMenu = (
+      <div >
+        <IconButton>
+          <SocialNotifications color = {"white"}/>
+        </IconButton>
+        <Avatar
+          src = "images/avatar.jpg"
+          size = {30}
+        />
+        <IconMenu
+          iconButtonElement = {
+            <IconButton><MoreVertIcon color = {"white"}/></IconButton>
+          }
+          targetOrigin = { {horizontal: 'right', vertical: 'top'} }
+          anchorOrigin = { {horizontal: 'right', vertical: 'top'} }
+        >
+          <MenuItem primaryText = "Ayuda" />
+          <MenuItem primaryText = "Salir" />
+        </IconMenu>
+      </div>
     );
 
     /* titles of the Navigation Bar */
@@ -50,6 +78,7 @@ class Header extends Component {
         <AppBar
           title = { title }
           iconElementLeft = { menuButton }
+          iconElementRight = { leftMenu }
           style = { styles.navBar }
         />
         { /* Menu - Left Navigation Bar */ }
@@ -58,13 +87,13 @@ class Header extends Component {
           docked = { false }
           onRequestChange = { (open) => this.setState({ open }) }
         >
-          <Link to="/dashboard" >
+          <Link to = "/dashboard" >
             <MenuItem onClick = { this.handleClose }>
               Dashboard
             </MenuItem>
           </Link>
 
-          <Link to="/inspecciones">
+          <Link to = "/inspecciones">
             <MenuItem onClick = { this.handleClose }>
             Inspecciones
             </MenuItem>
