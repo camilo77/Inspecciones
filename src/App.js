@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 
-import Header from './Components/Header'
+import Header from './Components/Header/Header'
 
 import { default as Solicitar } from  './Components/Views/Solicitar/Index';
 import { default as Dashboard } from  './Components/Views/Dashboard/Index';
