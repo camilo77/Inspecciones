@@ -19,7 +19,7 @@ class Index extends Component {
           />
         </Link>
         { " " }
-        <Link to="/inspecciones">
+        <Link to="/agendar">
           <RaisedButton
             primary = { true }
             label = "Agendar Inspección"

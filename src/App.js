@@ -8,6 +8,7 @@ import './App.css';
 
 import Header from './Components/Header/Header'
 
+import { default as Agendar } from  './Components/Views/Agendar/Index';
 import { default as Solicitar } from  './Components/Views/Solicitar/Index';
 import { default as Dashboard } from  './Components/Views/Dashboard/Index';
 
@@ -24,6 +25,7 @@ class App extends Component {
               <Route exact path="/" component = { Dashboard }/>
               <Route exact path="/dashboard" component = { Dashboard } />
               <Route exact path="/inspecciones" component = { Solicitar }/>
+              <Route exact path="/agendar" component = { Agendar }/>
             </div>
           </MuiThemeProvider>
         </div>
