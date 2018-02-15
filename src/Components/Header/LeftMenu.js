@@ -19,18 +19,22 @@ import MapsDirectionsWalk from 'material-ui/svg-icons/maps/directions-walk';
 /* render sub menu when is request to open */
 const SubMenuInspeciones = ( props ) => (
   <div style = { styles.subMenu }>
-    <MenuItem
-      onClick = { props.onClickMenuItem }
-      rightIcon = { <CommunicationCall/> }
-    >
-      Solicitar
-    </MenuItem>
-    <MenuItem
-      onClick = { props.onClickMenuItem }
-      rightIcon = { <ActionDateRange/> }
-    >
-      Agendar
-    </MenuItem>
+    <Link to = "/solicitar" style = { styles.link }>
+      <MenuItem
+        onClick = { props.onClickMenuItem }
+        rightIcon = { <CommunicationCall/> }
+      >
+        Solicitar
+      </MenuItem>
+    </Link>
+    <Link to = "/agendar" style = { styles.link }>
+      <MenuItem
+        onClick = { props.onClickMenuItem }
+        rightIcon = { <ActionDateRange/> }
+      >
+        Agendar
+      </MenuItem>
+    </Link>
   </div>
 );
 
@@ -56,7 +60,7 @@ class MenuBody extends Component{
   constructor( props ) {
     super( props );
     this.state = {
-      openSubMenuInspecciones: true,
+      openSubMenuInspecciones: false,
       openSubMenuInspectores: false,
     }
   }

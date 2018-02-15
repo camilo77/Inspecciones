@@ -24,7 +24,7 @@ class App extends Component {
             <div style = { styles.body }>
               <Route exact path="/" component = { Dashboard }/>
               <Route exact path="/dashboard" component = { Dashboard } />
-              <Route exact path="/inspecciones" component = { Solicitar }/>
+              <Route exact path="/solicitar" component = { Solicitar }/>
               <Route exact path="/agendar" component = { Agendar }/>
             </div>
           </MuiThemeProvider>

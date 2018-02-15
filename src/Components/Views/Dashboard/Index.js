@@ -12,7 +12,7 @@ class Index extends Component {
         <Divider/>
         <h1>Otras Funciones</h1>
 
-        <Link to="/inspecciones">
+        <Link to="/solicitar">
           <RaisedButton
             primary = { true }
             label = "Solicitar Inspección"

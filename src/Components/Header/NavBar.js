@@ -33,8 +33,12 @@ const Title = ( props ) => (
       render = { () => <div>Dashboard</div> }
     />
     <Route
-      exact path = "/inspecciones"
-      render = { () => <div>Inspecciones</div> }
+      exact path = "/solicitar"
+      render = { () => <div>Solicitar</div> }
+    />
+    <Route
+      exact path = "/agendar"
+      render = { () => <div>Agendar</div> }
     />
   </div>
 );
