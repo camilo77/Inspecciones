@@ -70,7 +70,7 @@ const styles = {
 };
 
 const equipos = [
-	{id: 1, nombre: "Ascensor"},
+	{id: 1, nombre: "Ascensores"},
 	{id: 2, nombre: "Puerta Eléctrica"},
 	{id: 3, nombre: "Escalera / Anden"},
 ]
