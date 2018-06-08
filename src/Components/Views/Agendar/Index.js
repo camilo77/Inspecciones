@@ -5,7 +5,8 @@ class Index extends Component {
   render(){
     return(
       <div>
-        <FormAgendar/>
+      	<br/>
+        <center><FormAgendar/></center>
       </div>
     );
   }
